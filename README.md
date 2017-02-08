@@ -12,3 +12,6 @@ One way to make an animation is to use the following:
     convert out.gif -coalesce -duplicate 1,-2-1 -quiet -layers OptimizePlus -loop 0 new.gif
 
 (Make sure you clear out any old .png files before you start rendering the new ones.)
+
+The images produced by my code disagreed with those at the NIST web site.
+Turns out my code was correct: http://dlmf.nist.gov/errata/
