@@ -1,6 +1,6 @@
 Code to render plots of functions modelling caustics with diffraction.
 
-[Plot of absolute value of Pearcey function](Plot_of_absolute_value_of_Pearcey_integral.png?raw=true)
+![Plot of absolute value of Pearcey function](Plot_of_absolute_value_of_Pearcey_integral.png?raw=true)
 
 For definitions, see http://dlmf.nist.gov/36.2
 
