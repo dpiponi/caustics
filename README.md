@@ -17,3 +17,9 @@ One way to make an animation is to use the following:
 
 The images produced by my code disagreed with those at the NIST web site.
 Turns out my code was correct: http://dlmf.nist.gov/errata/
+
+keywords:
+wave optics
+catastrophe theory
+Pearcey integral
+swallowtail integral
