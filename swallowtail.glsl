@@ -1,5 +1,6 @@
 // Not yet optimised...
-// For use at Shadertoy
+
+#if __VERSION__ < 130
 
 float tanh(float x) {
     if (x < -12.0) {
@@ -17,18 +18,20 @@ float cosh(float x) {
     return (1.0+p)/(2.0*p);
 }
 
+#endif
+
 vec2 ctimes(vec2 a, vec2 b) {
-    return vec2(a.x*b.x-a.y*b.y, a.x*b.y+a.y*b.x);
+    return mat2(a, -a.y, a.x)*b;
 }
 
 vec2 cexp(vec2 a) {
     float r = exp(a.x);
-    return vec2(r*cos(a.y), r*sin(a.y));
+    return r*vec2(cos(a.y), sin(a.y));
 }
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
     const int N = 256;
-#define M 257
+#define M 161
     float rate = 0.005;
     
     float xmin = -30.0;
@@ -60,7 +63,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
                 coeff = 2.0;
             }
         }
-    	float x = -12.0+24.0*float(k)/float(M);
+    	float x = -6.0+12.0*float(k)/float(M);
     	float y = tanh(rate*(5.0*x*x*x*x+3.0*gamma*x*x+2.0*beta*x+alpha));
         
         vec2 z = vec2(x, y);
@@ -71,14 +74,14 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
 
         vec2 f = z5+gamma*z3+beta*z2+alpha*z;
 		vec2 g = cexp(vec2(-f.y, f.x));
-        
+       
         float d = cosh(rate*(5.0*x*x*x*x+3.0*gamma*x*x+2.0*beta*x+alpha));
         vec2 dz = vec2(1.0, rate*(20.0*x*x*x+6.0*gamma*x+2.0*beta)/(d*d));
         
         integral += coeff*g;
     }
    
-    float value = 0.05*length(integral/3.0);
+    float value = 0.045*length(integral/3.0);
     
     fragColor = vec4(value, value, value, 1.0);
 }
