@@ -37,10 +37,14 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
 #define M 197
     float rate = 0.005;
     
-    float xmin = -70.0;
-    float xmax = 70.0;
-    float ymin = -30.0;
-    float ymax = 110.0;
+    //float xmin = -60.0;
+    //float xmax = 60.0;
+    float xmax = 20.0+iMouse.x/iResolution.x*80.0;
+    float xmin = -xmax;
+    float ymax = xmax+15.0;
+    float ymin = xmin+15.0;
+    //float ymin = -30.0;
+    //float ymax = 90.0;
     
     float gamma = -3.75+5.75*sin(iTime);
     
@@ -85,8 +89,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
 		vec2 g = cexp(vec2(-f.y, f.x));
        
         float d = cosh(u);
-        vec2 dz = dx*vec2(1.0, rate*(20.0*x3+6.0*gamma*x+2.0*beta)/(d*d));
-        
+        vec2 dz = dx*vec2(1.0, rate*(20.0*x3+6.0*gamma*x+2.0*beta)/(d*d));      
 
  		integral += coeff*ctimes(g, dz);
 
