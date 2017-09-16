@@ -20,13 +20,7 @@ One way to make an animation is to use the following:
 
 (Make sure you clear out any old .png files before you start rendering the new ones.)
 
-I have also added some GLSL code. This is used at [https://www.shadertoy.com/view/ltlyzj](Shadertoy).
+I have also added some GLSL code. This is used at [Shadertoy](https://www.shadertoy.com/view/ltlyzj).
 
 The images produced by my code disagreed with those at the NIST web site.
 Turns out my code was correct: http://dlmf.nist.gov/errata/
-
-keywords:
-wave optics
-catastrophe theory
-Pearcey integral
-swallowtail integral
