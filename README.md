@@ -1,6 +1,6 @@
 Code to render plots of functions modelling caustics with diffraction.
 
-Compare this plot of the Percey integral generated using pearcey.py:
+Compare this plot of the Pearcey integral generated using pearcey.py:
 ![Plot of absolute value of Pearcey function](Plot_of_absolute_value_of_Pearcey_integral.png?raw=true)
 
 with this photograph of a caustic created by illuminating the bathroom wall with a laser pointer through a drop of water on the mirror:
