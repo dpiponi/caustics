@@ -1,4 +1,10 @@
+Caustics
+========
 Code to render plots of functions modelling caustics with diffraction.
+
+Status
+------
+This is pretty much complete. The goal was to compute certain integrals for a certain range of parameters and the code does so.
 
 Compare this plot of the Pearcey integral generated using pearcey.py:
 ![Plot of absolute value of Pearcey function](Plot_of_absolute_value_of_Pearcey_integral.png?raw=true)
