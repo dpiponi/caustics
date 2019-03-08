@@ -13,6 +13,9 @@ with this photograph of a caustic created by illuminating the bathroom wall with
 
 ![Photograph of a cusp caustic](A_photograph_of_a_cusp_caustic.png?raw=true)
 
+Here's the hyperbolic-umbilic caustic:
+![Plot of absolute value of Hyperbolic-Umbilic function](Plot_of_absolute_value_of_hyperbolic_umbilic_integral.png?raw=true)
+
 For definitions, see http://dlmf.nist.gov/36.2
 
 Some plots are 2D. These produce just a single image in a matplotlib window.
